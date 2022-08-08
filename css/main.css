@@ -1,10 +1,15 @@
 *{
     margin: 0;
     padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 a{
     text-decoration: none;
+}
+
+body{
+    position: relative;
 }
 
 .options{
@@ -19,9 +24,80 @@ a{
 
 a.a-btn{
     text-align: center;
-    padding: 20px;
+    padding: 15px;
     background-color:lightseagreen;
     color: azure;
-    border-radius: 20px;
+    border-radius: 15px;
     outline: none;
+}
+
+.btn{
+    border: none;
+    text-align: center;
+    padding: 10px;
+    background-color:lightseagreen;
+    color: azure;
+    border-radius: 10px;
+    outline: none;
+
+}
+
+#listContainer{
+    width: fit-content;
+    margin: 20px auto;
+}
+
+#listContainer .listItem{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 20px;
+    background-color: lightcyan;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+#listContainer .listItem .info{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    row-gap: 5px;
+}
+
+
+#listContainer .listItem .info .name{
+    font-weight: bold;
+}
+
+.formContainer{
+    height: auto;
+    width: fit-content;
+    margin: 0 auto;
+}
+
+#personInfo{
+    position: absolute;
+    top: 1px;
+    left: 50%;
+    transform: translateX(-50%);
+    height: fit-content;
+    width: fit-content;
+    max-width: 300px;
+    background-color: #fff;
+}
+
+#personInfo .infoSection{
+    background-color: lightcyan;
+    padding: 10px;
+    margin: 10px 0;
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+}
+
+
+#personInfo .infoSection .infoItem{
+    display: flex;
+    justify-content: flex-start;
+    column-gap: 10px;
 }
