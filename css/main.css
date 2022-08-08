@@ -102,6 +102,19 @@ a.a-btn{
     column-gap: 10px;
 }
 
+#memberForm{
+    /* width: fit-content; */
+    max-width: 700px;
+    margin: 30px auto;
+}
+#memberForm .memberSection{
+    border-radius: 5px;
+    background-color: lightcyan;
+    padding: 20px 10px;
+    margin: 30px 0;
+}
+
+
 @media only screen and (max-width: 600px) {
     #personInfo{
         left: 50%;
