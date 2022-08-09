@@ -6,7 +6,7 @@ let data = {
         "If you cant find a team member, look in the <a href=\"./showAvailable.html\">available members</a> section",
         "If you cant find anyone, list your information <a target=\"_blank\" href=\"https://docs.google.com/forms/d/e/1FAIpQLSda_j28F0ABCQq71I8aSa1MTHfCIVFMAe4m2AiR_1r7KYdIWA/viewform?usp=sf_link\">here</a>",
         "You cannot delete or update any team information currently, contact me if you need to",
-        "one participant cannot be in multiple teams !!"
+        "One participant cannot be in multiple teams !!"
     ]
 }
 
