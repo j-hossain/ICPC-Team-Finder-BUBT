@@ -32,6 +32,7 @@ a.a-btn{
 }
 
 .btn{
+    cursor: pointer;
     border: none;
     text-align: center;
     padding: 10px;
@@ -68,7 +69,7 @@ a.a-btn{
     background-color: lightcyan;
     padding: 10px;
     margin: 10px 0;
-    border-radius: 5px;
+    border-radius: 10px;
 }
 
 #listContainer .listItem .info{
@@ -147,6 +148,39 @@ a.a-btn{
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
     margin-bottom: 15px;
+}
+
+.teamListContainer .listItem{
+    display: flex;
+    flex-direction: column;
+}
+
+.teamListContainer .listItem .info.top{
+    display: flex;
+    flex-direction: row !important;
+    column-gap: 30px;
+    align-items: center;
+    padding-bottom: 10px;
+}
+
+.contentBody h3{
+    text-align: center;
+    margin-top: 30px;
+}
+
+#listParent{
+    padding: 30px;
+}
+
+#listParent li{
+    margin: 10px 0;
+    background-color: lightseagreen;
+    color: #fff;
+    list-style: none;
+    padding: 10px;
+    border-radius: 10px;
+    text-transform: capitalize;
+    text-align: justify;
 }
 
 
