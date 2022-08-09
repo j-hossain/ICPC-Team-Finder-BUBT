@@ -54,7 +54,12 @@ function checkTeam(info){
         }
     });
     if(flag){
-        sendTeam(info);
+        if(confirm("You cannont update your team information next time. Are you sure about this team ?")){
+            sendTeam(info);
+        }
+        else{
+            document.querySelector(".loaderImage").style.display="none";
+        }
     }
 }
 
