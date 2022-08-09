@@ -70,23 +70,23 @@ function createListItem(data,i){
 
 function loadPerson(i){
     let parent = document.getElementById("personInfo");
-    parent.querySelector(".name").innerHTML = AllData[i]["Full Name"];
-    parent.querySelector(".intake").innerHTML = AllData[i]["Intake"];
-    parent.querySelector(".shift").innerHTML = AllData[i]["Shift"];
-    parent.querySelector(".section").innerHTML = AllData[i]["Section"];
-    parent.querySelector(".stopstalk").href = AllData[i]["StopStalk ID link"];
-    parent.querySelector(".solve").innerHTML = AllData[i]["Total number of problems solved in online judges"];
-    parent.querySelector(".cfmax").innerHTML = AllData[i]["Codeforces max rating"];
-    parent.querySelector(".phone").innerHTML = AllData[i]["Phone"];
-    parent.querySelector(".email").href = "mailto:"+AllData[i]["Email"];
-    parent.querySelector(".email").innerHTML = AllData[i]["Email"];
-    parent.querySelector(".facebook").href = AllData[i]["Facebook profile link"];
-    parent.querySelector(".discord").innerHTML = AllData[i]["Discord ID"];
-    parent.querySelector(".comment").innerHTML = AllData[i]["Say anything to you future team mates"];
+    parent.querySelector(".name").innerHTML = filterdData[i]["Full Name"];
+    parent.querySelector(".intake").innerHTML = filterdData[i]["Intake"];
+    parent.querySelector(".shift").innerHTML = filterdData[i]["Shift"];
+    parent.querySelector(".section").innerHTML = filterdData[i]["Section"];
+    parent.querySelector(".stopstalk").href = filterdData[i]["StopStalk ID link"];
+    parent.querySelector(".solve").innerHTML = filterdData[i]["Total number of problems solved in online judges"];
+    parent.querySelector(".cfmax").innerHTML = filterdData[i]["Codeforces max rating"];
+    parent.querySelector(".phone").innerHTML = filterdData[i]["Phone"];
+    parent.querySelector(".email").href = "mailto:"+filterdData[i]["Email"];
+    parent.querySelector(".email").innerHTML = filterdData[i]["Email"];
+    parent.querySelector(".facebook").href = filterdData[i]["Facebook profile link"];
+    parent.querySelector(".discord").innerHTML = filterdData[i]["Discord ID"];
+    parent.querySelector(".comment").innerHTML = filterdData[i]["Say anything to you future team mates"];
     
-    if(AllData[i]["StopStalk ID link"]=="")
+    if(filterdData[i]["StopStalk ID link"]=="")
         parent.querySelector(".stopstalk").innerHTML = "";
-    if(AllData[i]["Facebook profile link"]=="")
+    if(filterdData[i]["Facebook profile link"]=="")
         parent.querySelector(".facebook").innerHTML = "";
 
     openInfo();
