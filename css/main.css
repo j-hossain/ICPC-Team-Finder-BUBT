@@ -163,6 +163,11 @@ a.a-btn{
     padding-bottom: 10px;
 }
 
+.contentBody{
+    margin: 0 auto;
+    max-width: 500px;
+}
+
 .contentBody h3{
     text-align: center;
     margin-top: 30px;
