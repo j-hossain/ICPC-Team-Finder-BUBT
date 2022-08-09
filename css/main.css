@@ -42,8 +42,21 @@ a.a-btn{
 
 }
 
+.loaderImage{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    z-index: 999;
+    transform: translate(-50%,-50%);
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    border-radius: 50%;
+}
+
 #listContainer{
-    width: fit-content;
+    width: 95%;
+    max-width: 400px;
     margin: 20px auto;
 }
 
@@ -55,6 +68,7 @@ a.a-btn{
     background-color: lightcyan;
     padding: 10px;
     margin: 10px 0;
+    border-radius: 5px;
 }
 
 #listContainer .listItem .info{
@@ -69,6 +83,11 @@ a.a-btn{
     font-weight: bold;
 }
 
+.no_data{
+    font-size: large;
+    text-align: center;
+}
+
 .formContainer{
     height: auto;
     width: fit-content;
@@ -81,8 +100,8 @@ a.a-btn{
     left: 20px;
     /* transform: translateX(-50%); */
     height: fit-content;
-    width: fit-content;
-    max-width: 300px;
+    width: 95%;
+    max-width: 400px;
     background-color: #fff;
 }
 
@@ -93,6 +112,7 @@ a.a-btn{
     display: flex;
     flex-direction: column;
     row-gap: 10px;
+    border-radius: 5px;
 }
 
 
@@ -108,10 +128,25 @@ a.a-btn{
     margin: 30px auto;
 }
 #memberForm .memberSection{
-    border-radius: 5px;
+    text-align: center;
+    border-radius: 10px;
     background-color: lightcyan;
-    padding: 20px 10px;
+    padding: 0 10px;
+    padding-bottom: 20px;
     margin: 30px 0;
+}
+
+
+#memberForm .memberSection .memberHead{
+    background-color: lightseagreen;
+    display: inline-block;
+    font-size: 24px;
+    text-align: center;
+    color: #fff;
+    padding: 5px 55px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    margin-bottom: 15px;
 }
 
 

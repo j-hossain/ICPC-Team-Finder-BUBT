@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/main.css">
+    <script src="./js/common.js"></script>
+    <script src="./js/showAllTeam.js"></script>
+    <title>All teams</title>
+</head>
+<body>
+    <img class="loaderImage" src="./res/loader.gif" alt="Loading.....">
+    <div id="personInfo"  style="display: none;">
+        <div style="padding: 10px 0; display: flex; justify-content: flex-end;" class="hder">
+            <button class="btn" type="button" onclick="closeInfo()">Close</button>
+        </div>
+        <div class="infoSection">
+            <div class="infoItem">
+                <span class="team_name"></span>
+            </div>
+        </div>
+        <div class="infoSection">
+            <div class="infoItem">
+                <span>Name:</span>
+                <span class="mem1_name"></span>
+            </div>
+            <div class="infoItem">
+                <span>Intake:</span>
+                <span class="mem1_intake"></span>
+            </div>
+            <div class="infoItem">
+                <span>ID:</span>
+                <span class="mem1_id"></span>
+            </div>
+            <div class="infoItem">
+                <span>Email:</span>
+                <span class="mem1_email"></span>
+            </div>
+        </div>
+        <div class="infoSection">
+            <div class="infoItem">
+                <span>Name:</span>
+                <span class="mem2_name"></span>
+            </div>
+            <div class="infoItem">
+                <span>Intake:</span>
+                <span class="mem2_intake"></span>
+            </div>
+            <div class="infoItem">
+                <span>ID:</span>
+                <span class="mem2_id"></span>
+            </div>
+            <div class="infoItem">
+                <span>Email:</span>
+                <span class="mem2_email"></span>
+            </div>
+        </div>
+        <div class="infoSection">
+            <div class="infoItem">
+                <span>Name:</span>
+                <span class="mem3_name"></span>
+            </div>
+            <div class="infoItem">
+                <span>Intake:</span>
+                <span class="mem3_intake"></span>
+            </div>
+            <div class="infoItem">
+                <span>ID:</span>
+                <span class="mem3_id"></span>
+            </div>
+            <div class="infoItem">
+                <span>Email:</span>
+                <span class="mem3_email"></span>
+            </div>
+        </div>
+    </div>
+    <div id="listContainer">
+        <span class="no_data" style="display: none;">No team is listed yet</span>
+        <div id="listItemTemplate" style="display: none;" class="listItem">
+            <div class="info">
+                <span style="font-weight: bold; font-size: 18px;" class="team_name"></span>
+                <button type="button" class="btn"> Details </button>
+            </div>
+            <div class="info">
+                <p><span class="mem1_name"></span></p>
+                <p><span class="mem2_name"></span></p>
+                <p><span class="mem3_name"></span></p>
+            </div>
+        </div>
+   </div> 
+</body>
+</html>

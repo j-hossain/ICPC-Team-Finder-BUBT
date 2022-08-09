@@ -5,17 +5,18 @@ let AllData = [];
 function getAllAvailable(){
     const xhttp = new XMLHttpRequest();
     xhttp.onload = async function() {
+        document.querySelector(".loaderImage").style.display="none";
         let res = JSON.parse(xhttp.responseText);
         AllData = res[0].data;
-        createTable(res[0].data);
-        // if(res=="ok"){
-        //     alert("User role updated");
-        // }
-        // else{
-        //     alert(res);
-        // }
+        if(AllData.length==0){
+            document.querySelector(".no_data").style.display = "block";
+        }
+        else{
+            document.querySelector(".no_data").style.display = "none";
+            createTable(res[0].data);
+        }
     }
-    xhttp.open("GET", "https://script.google.com/macros/s/AKfycbzFRrLbeDdPdjRkQu5W0tuyojDkQhhgsLV00AhS8c8TQ6QVmpn84qNMZB7gkR15bgAOZw/exec");
+    xhttp.open("GET", teamFinderUrl);
     xhttp.send();
 }
 
@@ -25,7 +26,6 @@ function createTable(data){
     // "Say anything to you future team mates","Section","Timestamp",
     // "Total number of problems solved in online judges","Discord ID",
     // "StopStalk ID link"];
-    let headers = ["Full Name","Intake"]
     let n = data.length;
     for(let i=0;i<n;i++){
         createListItem(data[i],i);
@@ -48,7 +48,7 @@ function loadPerson(i){
     let parent = document.getElementById("personInfo");
     parent.querySelector(".name").innerHTML = AllData[i]["Full Name"];
     parent.querySelector(".intake").innerHTML = AllData[i]["Intake"];
-    parent.querySelector(".deptartment").innerHTML = AllData[i]["Department"];
+    parent.querySelector(".shift").innerHTML = AllData[i]["Shift"];
     parent.querySelector(".section").innerHTML = AllData[i]["Section"];
     parent.querySelector(".stopstalk").href = AllData[i]["StopStalk ID link"];
     parent.querySelector(".solve").innerHTML = AllData[i]["Total number of problems solved in online judges"];
