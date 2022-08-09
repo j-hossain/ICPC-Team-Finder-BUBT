@@ -32,13 +32,15 @@ function createTeam(){
 }
 
 function checkTeam(info){
-    const xhttp = new XMLHttpRequest();
-    xhttp.onload = async function() {
-        let res = JSON.parse(xhttp.responseText);
-        let teamData = res[0].data;
-        console.log(teamData);
-        let flag=1;
-        teamData.forEach(team=>{
+    let flag=1;
+    AllData.forEach(team=>{
+        if(flag==1){
+            if(team["team_name"]==info["team_name"]){
+                alert("This team name is already used, try a unique name !!");
+                flag=0;
+                document.querySelector(".loaderImage").style.display="none";
+                return;
+            }
             for(let i=1;i<=3;i++){
                 for(let j=1;j<=3;j++){
                     if(info["mem"+i+"_id"]==team["mem"+j+"_id"] && team["team_name"]!=info["team_name"]){
@@ -49,13 +51,11 @@ function checkTeam(info){
                     }
                 }
             }
-        });
-        if(flag){
-            sendTeam(info);
         }
+    });
+    if(flag){
+        sendTeam(info);
     }
-    xhttp.open("GET", teamInfoUrl);
-    xhttp.send();
 }
 
 function sendTeam(info){
