@@ -62,6 +62,7 @@ a.a-btn{
 }
 
 #listContainer .listItem{
+    width: 90%;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -73,6 +74,7 @@ a.a-btn{
 }
 
 #listContainer .listItem .info{
+    width: 90%;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
@@ -158,6 +160,7 @@ a.a-btn{
 .teamListContainer .listItem .info.top{
     display: flex;
     flex-direction: row !important;
+    justify-content: space-between !important;
     column-gap: 30px;
     align-items: center;
     padding-bottom: 10px;
