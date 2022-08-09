@@ -1,6 +1,26 @@
 // closeInfo();
 getAllAvailable();
 let AllData = [];
+let filterdData = [];
+
+function search(){
+    let value = document.getElementById("search").value;
+    if(value==""){
+        filterdData = AllData;
+        createTable(filterdData);
+        return;
+    }
+    filterdData = [];
+    AllData.forEach(data=>{
+        if(data["Full Name"].toString().toLowerCase().match(value))
+            filterdData.push(data);
+        if(data["Intake"].toString().toLowerCase().match(value))
+            filterdData.push(data);
+        if(data["Shift"].toString().toLowerCase().match(value))
+            filterdData.push(data);
+    });
+    createTable(filterdData);
+}
 
 function getAllAvailable(){
     const xhttp = new XMLHttpRequest();
@@ -8,6 +28,7 @@ function getAllAvailable(){
         document.querySelector(".loaderImage").style.display="none";
         let res = JSON.parse(xhttp.responseText);
         AllData = res[0].data;
+        filterdData = AllData;
         if(AllData.length==0){
             document.querySelector(".no_data").style.display = "block";
         }
@@ -21,6 +42,9 @@ function getAllAvailable(){
 }
 
 function createTable(data){
+    
+    let parent = document.getElementById("listContainer");
+    parent.innerHTML = '';
     // let headers = ["Codeforces max rating","Department","Email",
     // "Facebook profile link","Full Name","Intake","Phone",
     // "Say anything to you future team mates","Section","Timestamp",

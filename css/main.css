@@ -191,6 +191,21 @@ a.a-btn{
     text-align: justify;
 }
 
+.searchBox{
+    width: 95%;
+    max-width: 400px;
+    margin: 20px auto;
+    display: flex;
+    column-gap: 10px;
+}
+
+#search{
+    width: 100%;
+    outline: none;
+    border: 1px solid #eee;
+    padding: 10px;
+}
+
 
 @media only screen and (max-width: 600px) {
     #personInfo{

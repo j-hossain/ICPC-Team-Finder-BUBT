@@ -1,18 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/main.css">
     <script src="./js/common.js"></script>
-    <script src="./js/showAvailable.js"></script>
     <title>Show all available students</title>
 </head>
+
 <body>
-   
+    <div class="searchBox">
+        <input type="text" id="search" placeholder="Search by name, intake or shift">
+        <button class="btn" type="button" onclick="search()">Search</button>
+    </div>
     <img class="loaderImage" src="./res/loader.gif" alt="Loading.....">
-   <div id="personInfo" style="display: none;">
+    <div id="personInfo" style="display: none;">
         <div style="padding: 10px 0; display: flex; justify-content: flex-end;" class="hder">
             <button class="btn" type="button" onclick="closeInfo()">Close</button>
         </div>
@@ -25,7 +29,7 @@
                 <span class="shift"></span>
                 <span class="intake"></span>
                 <span>Intake</span>
-                <span>[  Sec</span>
+                <span>[ Sec</span>
                 <span class="section"></span>
                 <span>]</span>
             </div>
@@ -70,14 +74,16 @@
         </div>
     </div>
     <div id="listContainer">
-        <span class="no_data"  style="display: none;">No one is available here currently</span>
-        <div id="listItemTemplate" style="display: none;" class="listItem">
-            <div class="info">
-                <p><span class="name"></span></p>
-                <p>Intake: <span class="intake"></span></p>
-            </div>
-            <button type="button" class="btn">Details</button>
+    </div>
+    <span class="no_data" style="display: none;">No one is available here currently</span>
+    <div id="listItemTemplate" style="display: none;" class="listItem">
+        <div class="info">
+            <p><span class="name"></span></p>
+            <p>Intake: <span class="intake"></span></p>
         </div>
-   </div> 
+        <button type="button" class="btn">Details</button>
+    </div>
+    <script src="./js/showAvailable.js"></script>
 </body>
+
 </html>
