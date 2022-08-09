@@ -98,9 +98,10 @@ a.a-btn{
 }
 
 #personInfo{
-    position: absolute;
+    position: fixed;
     top: 0px;
     left: 20px;
+    z-index: 999;
     /* transform: translateX(-50%); */
     height: 100vh;
     width: 95%;
@@ -161,7 +162,7 @@ a.a-btn{
     display: flex;
     flex-direction: row !important;
     justify-content: space-between !important;
-    column-gap: 30px;
+    column-gap: 10px;
     align-items: center;
     padding-bottom: 10px;
 }

@@ -86,8 +86,12 @@ function loadPerson(i){
     
     if(filterdData[i]["StopStalk ID link"]=="")
         parent.querySelector(".stopstalk").innerHTML = "";
+    else
+        parent.querySelector(".stopstalk").innerHTML = "link";
     if(filterdData[i]["Facebook profile link"]=="")
         parent.querySelector(".facebook").innerHTML = "";
+    else
+        parent.querySelector(".facebook").innerHTML = "link";
 
     openInfo();
 }
