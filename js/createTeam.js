@@ -33,6 +33,12 @@ function createTeam(){
 
 function checkTeam(info){
     let flag=1;
+    if(!info["team_name"].toString().toLowerCase().match("bubt")){
+        alert("MUST use BUBT before team name...");
+        flag=0;
+        document.querySelector(".loaderImage").style.display="none";
+        return;
+    }
     AllData.forEach(team=>{
         if(flag==1){
             if(team["team_name"]==info["team_name"]){
