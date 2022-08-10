@@ -38,6 +38,7 @@ function createListItem(data,i){
     listItem.querySelector(".mem1_name").innerHTML = data["mem1_name"];
     listItem.querySelector(".mem2_name").innerHTML = data["mem2_name"];
     listItem.querySelector(".mem3_name").innerHTML = data["mem3_name"];
+    listItem.querySelector(".reg_status").innerHTML = data["reg_status"];
     listItem.querySelector(".btn").addEventListener("click",function(){loadTeam(i)});
 }
 
