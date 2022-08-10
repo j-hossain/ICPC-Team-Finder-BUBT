@@ -14,6 +14,7 @@ function getAllTeam(){
         }
         else{
             document.querySelector(".no_data").style.display = "none";
+            document.getElementById("total_team").innerHTML = AllData.length;
             createTable(res[0].data);
         }
     }

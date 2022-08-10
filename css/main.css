@@ -211,6 +211,10 @@ a.a-btn{
     padding: 10px;
 }
 
+.teamCount{
+    text-align: center;
+}
+
 
 @media only screen and (max-width: 600px) {
     #personInfo{
