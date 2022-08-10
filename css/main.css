@@ -215,6 +215,22 @@ a.a-btn{
     text-align: center;
 }
 
+.navbar{
+    background-color: lightseagreen;
+}
+
+.nav-item{
+    padding: 0 20px;
+    border-right: 1px solid #ccc;
+    border-left: 1px solid #ccc;
+    /* background: lightcyan;
+    border-radius: 10px;
+    margin: 0 5px; */
+}
+.nav-item a{
+    color: #fff !important;
+}
+
 
 @media only screen and (max-width: 600px) {
     #personInfo{
