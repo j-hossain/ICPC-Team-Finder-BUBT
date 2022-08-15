@@ -45,8 +45,11 @@ function createListItem(data,i){
         listItem.classList.add("notyet");
     }
     if(data["reg_status"]=="pending"){
-        listItem.querySelector(".reg_status").innerHTML = "Team created: Waiting for clearing ineligibility";
+        listItem.querySelector(".reg_status").innerHTML = "Team created - Waiting for clearing ineligibility";
         listItem.classList.add("pending");
+    }
+    if(data["reg_status"]=="complete"){
+        listItem.querySelector(".reg_status").innerHTML = "Team created";
     }
     listItem.querySelector(".btn").addEventListener("click",function(){loadTeam(i)});
 }
