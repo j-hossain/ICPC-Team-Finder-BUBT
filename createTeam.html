@@ -1,39 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" href="./css/main.css">
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-    <script src="./js/common.js"></script>
-    <script src="./js/createTeam.js"></script>
-    <title>Confirm a team</title>
-  </head>
-  <body>
-    <div class="">
-      <nav class="navbar navbar-expand-lg navbar-light" >
-        <!-- <a class="navbar-brand" href="#">Navbar</a> -->
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav m-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="./">Home </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="./showAllTeam.html">All Teams</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="./showAvailable.html">Available members</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSda_j28F0ABCQq71I8aSa1MTHfCIVFMAe4m2AiR_1r7KYdIWA/viewform?usp=sf_link">List yourself</a>
-            </li>
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="./css/main.css">
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+  <script src="./js/common.js"></script>
+  <script src="./js/createTeam.js"></script>
+  <title>Confirm a team</title>
+</head>
+
+<body>
+  <div class="">
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <!-- <a class="navbar-brand" href="#">Navbar</a> -->
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav m-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="./">Home </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./showAllTeam.html">All Teams</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./showAvailable.html">Available members</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" target="_blank"
+              href="https://docs.google.com/forms/d/e/1FAIpQLSda_j28F0ABCQq71I8aSa1MTHfCIVFMAe4m2AiR_1r7KYdIWA/viewform?usp=sf_link">List
+              yourself</a>
+          </li>
           <li class="nav-item">
             <a class="nav-link" href="./guideline.html">Guideline</a>
           </li>
@@ -46,11 +58,14 @@
     <form id="memberForm">
       <div class="mb-3">
         <label for="team_name" class="form-label">Team Name</label>
-        <input placeholder="BUBT_Name" required type="text" class="form-control" id="team_name" aria-describedby="emailHelp">
+        <input placeholder="BUBT_Name" required type="text" class="form-control" id="team_name"
+          aria-describedby="emailHelp">
         <div id="teamNameHelp" class="form-text">Must use BUBT before your team name, Example: BUBT_Anonymous</div>
         <label style="margin-top: 10px;" for="phone" class="form-label">Phone Number</label>
-        <input placeholder="+8801....." required type="number" class="form-control" id="phone" aria-describedby="emailHelp">
-        <div id="phoneHelp" class="form-text">Enter an active phone number so that we can contact you regarding resitration</div>
+        <input placeholder="+8801....." required type="number" class="form-control" id="phone"
+          aria-describedby="emailHelp">
+        <div id="phoneHelp" class="form-text">Enter an active phone number so that we can contact you regarding
+          resitration</div>
       </div>
       <div class="memberSection">
         <span class="memberHead">Member 1</span>
@@ -59,63 +74,77 @@
           <input placeholder="Member 1 Name" required type="text" class="form-control" id="mem1_name">
         </div>
         <div class="mb-3">
-                    <label for="mem1_intake" class="form-label">Intake</label>
-                    <input placeholder="Member 1 Intake" required type="number" class="form-control" id="mem1_intake">
-                  </div>
-                  <div class="mb-3">
-                    <label for="mem1_id" class="form-label">Student ID</label>
-                    <input placeholder="Member 1 ID" required type="number" class="form-control" id="mem1_id">
-                  </div>
-                  <div class="mb-3">
-                    <label for="mem1_email" class="form-label">ICPC global Email</label>
-                    <input placeholder="Member 1 Email" required type="email" class="form-control" id="mem1_email">
-                  </div>
-            </div>
-            <div class="memberSection">
-              <span class="memberHead">Member 2</span>
-              <div class="mb-3">
-                <label for="mem2_name" class="form-label">Full Name</label>
-                <input placeholder="Member 2 Name" required type="text" class="form-control" id="mem2_name">
-              </div>
-                  <div class="mb-3">
-                    <label for="mem2_intake" class="form-label">Intake</label>
-                    <input placeholder="Member 2 Intake" required type="number" class="form-control" id="mem2_intake">
-                  </div>
-                  <div class="mb-3">
-                    <label for="mem2_id" class="form-label">Student ID</label>
-                    <input placeholder="Member 2 ID" required type="number" class="form-control" id="mem2_id">
-                  </div>
-                  <div class="mb-3">
-                    <label for="mem2_email" class="form-label">ICPC global Email</label>
-                    <input placeholder="Member 2 Email" required type="email" class="form-control" id="mem2_email">
-                  </div>
-            </div>
-            <div class="memberSection">
-              <span class="memberHead">Member 3</span>
-              <div class="mb-3">
-                <label for="mem3_name" class="form-label">Full Name</label>
-                <input placeholder="Member 3 Name" required type="text" class="form-control" id="mem3_name">
-              </div>
-              <div class="mb-3">
-                <label for="mem3_intake" class="form-label">Intake</label>
-                <input placeholder="Member 3 Intake" required type="number" class="form-control" id="mem3_intake">
-              </div>
-                  <div class="mb-3">
-                    <label for="mem3_id" class="form-label">Student ID</label>
-                    <input placeholder="Member 3 ID" required type="number" class="form-control" id="mem3_id">
-                  </div>
-                  <div class="mb-3">
-                    <label for="mem3_email" class="form-label">ICPC global Email</label>
-                    <input placeholder="Member 3 Email" required type="email" class="form-control" id="mem3_email">
-                  </div>
-            </div>
-            <div style="display: flex; justify-content:flex-end" class="bt">
-              <button style="background-color: lightseagreen; color:#fff;" type="button" class="btn" onclick="createTeam()">Confirm Team</button>
-            </div>
-          </form>
-    </div>
-    <div class="footer">
-        <span>Developed By: </span> <a href="https://github.com/j-hossain">Jahin Hossain</a>
-    </div>
+          <label for="mem1_intake" class="form-label">Intake</label>
+          <input placeholder="Member 1 Intake" required type="number" class="form-control" id="mem1_intake">
+        </div>
+        <div class="mb-3">
+          <label for="mem1_sec" class="form-label">Section</label>
+          <input placeholder="Member 1 Section" required type="number" class="form-control" id="mem1_sec">
+        </div>
+        <div class="mb-3">
+          <label for="mem1_id" class="form-label">Student ID</label>
+          <input placeholder="Member 1 ID" required type="number" class="form-control" id="mem1_id">
+        </div>
+        <div class="mb-3">
+          <label for="mem1_email" class="form-label">ICPC global Email</label>
+          <input placeholder="Member 1 Email" required type="email" class="form-control" id="mem1_email">
+        </div>
+      </div>
+      <div class="memberSection">
+        <span class="memberHead">Member 2</span>
+        <div class="mb-3">
+          <label for="mem2_name" class="form-label">Full Name</label>
+          <input placeholder="Member 2 Name" required type="text" class="form-control" id="mem2_name">
+        </div>
+        <div class="mb-3">
+          <label for="mem2_intake" class="form-label">Intake</label>
+          <input placeholder="Member 2 Intake" required type="number" class="form-control" id="mem2_intake">
+        </div>
+        <div class="mb-3">
+          <label for="mem2_sec" class="form-label">Section</label>
+          <input placeholder="Member 2 Section" required type="number" class="form-control" id="mem2_sec">
+        </div>
+        <div class="mb-3">
+          <label for="mem2_id" class="form-label">Student ID</label>
+          <input placeholder="Member 2 ID" required type="number" class="form-control" id="mem2_id">
+        </div>
+        <div class="mb-3">
+          <label for="mem2_email" class="form-label">ICPC global Email</label>
+          <input placeholder="Member 2 Email" required type="email" class="form-control" id="mem2_email">
+        </div>
+      </div>
+      <div class="memberSection">
+        <span class="memberHead">Member 3</span>
+        <div class="mb-3">
+          <label for="mem3_name" class="form-label">Full Name</label>
+          <input placeholder="Member 3 Name" required type="text" class="form-control" id="mem3_name">
+        </div>
+        <div class="mb-3">
+          <label for="mem3_intake" class="form-label">Intake</label>
+          <input placeholder="Member 3 Intake" required type="number" class="form-control" id="mem3_intake">
+        </div>
+        <div class="mb-3">
+          <label for="mem3_sec" class="form-label">Section</label>
+          <input placeholder="Member 3 Section" required type="number" class="form-control" id="mem3_sec">
+        </div>
+        <div class="mb-3">
+          <label for="mem3_id" class="form-label">Student ID</label>
+          <input placeholder="Member 3 ID" required type="number" class="form-control" id="mem3_id">
+        </div>
+        <div class="mb-3">
+          <label for="mem3_email" class="form-label">ICPC global Email</label>
+          <input placeholder="Member 3 Email" required type="email" class="form-control" id="mem3_email">
+        </div>
+      </div>
+      <div style="display: flex; justify-content:flex-end" class="bt">
+        <button style="background-color: lightseagreen; color:#fff;" type="button" class="btn"
+          onclick="createTeam()">Confirm Team</button>
+      </div>
+    </form>
+  </div>
+  <div class="footer">
+    <span>Developed By: </span> <a href="https://github.com/j-hossain">Jahin Hossain</a>
+  </div>
 </body>
+
 </html>
