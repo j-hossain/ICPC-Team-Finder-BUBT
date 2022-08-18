@@ -1,6 +1,34 @@
 // closeInfo();
 getAllTeam();
+let filterdData = [];
 let AllData = [];
+
+function search(){
+    let value = document.getElementById("search").value;
+    if(value==""){
+        filterdData=AllData;
+        createTable(filterdData);
+        return;
+    }
+    filterdData = [];
+    AllData.forEach(data=>{
+        if(data["team_name"].toString().toLowerCase().match(value))
+            filterdData.push(data);
+        else if(data["mem1_name"].toString().toLowerCase().match(value))
+            filterdData.push(data);
+        else if(data["mem2_name"].toString().toLowerCase().match(value))
+            filterdData.push(data);
+        else if(data["mem3_name"].toString().toLowerCase().match(value))
+            filterdData.push(data);
+        else if(data["mem1_intake"].toString().toLowerCase().match(value))
+            filterdData.push(data);
+        else if(data["mem2_intake"].toString().toLowerCase().match(value))
+            filterdData.push(data);
+        else if(data["mem3_intake"].toString().toLowerCase().match(value))
+            filterdData.push(data);
+    });
+    createTable(filterdData);
+}
 
 function getAllTeam(){
     // document.querySelector(".loaderImage").style.display="block";
@@ -9,20 +37,24 @@ function getAllTeam(){
         document.querySelector(".loaderImage").style.display="none";
         let res = JSON.parse(xhttp.responseText);
         AllData = res[0].data;
-        if(AllData.length==0){
-            document.querySelector(".no_data").style.display = "block";
-        }
-        else{
-            document.querySelector(".no_data").style.display = "none";
-            document.getElementById("total_team").innerHTML = AllData.length;
-            createTable(res[0].data);
-        }
+        filterdData = AllData;
+        createTable(filterdData);
+        
     }
     xhttp.open("GET", teamInfoUrl);
     xhttp.send();
 }
 
 function createTable(data){
+    let parent = document.getElementById("listContainer");
+    parent.innerHTML = '';
+    if(filterdData.length==0){
+        document.getElementById("total_team").innerHTML = filterdData.length;
+        return;
+    }
+    else{
+        document.getElementById("total_team").innerHTML = filterdData.length;
+    }
     let n = data.length;
     for(let i=0;i<n;i++){
         createListItem(data[i],i);
@@ -58,8 +90,8 @@ function loadTeam(i){
     let parent = document.getElementById("personInfo");
     // console.log(parent.querySelector(".team_name"));
     openInfo();
-    for(keys in AllData[i]){
-        parent.querySelector("."+keys.toString()).innerHTML = AllData[i][keys];
+    for(keys in filterdData[i]){
+        parent.querySelector("."+keys.toString()).innerHTML = filterdData[i][keys];
     }
 }
 

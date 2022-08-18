@@ -39,6 +39,10 @@
           </ul>
         </div>
       </nav>
+      <div class="searchBox">
+        <input type="text" id="search" placeholder="Search by Team name, intake or member name">
+        <button class="btn" type="button" onclick="search()">Search</button>
+    </div>
     <img class="loaderImage" src="./res/loader.gif" alt="Loading.....">
     <div id="personInfo"  style="display: none;">
         <div style="padding: 10px 0; display: flex; justify-content: flex-end;" class="hder">
@@ -116,26 +120,27 @@
             </div>
         </div>
     </div>
+    <div class="teamCount">
+        <span>Total Teams: </span><span id="total_team"></span>
+    </div>
+    <span class="no_data" style="display: none;">No team is listed yet</span>
+    
+    <div id="listItemTemplate" style="display: none;" class="listItem">
+        <div class="top info">
+            <div class="team">
+                <p style="font-weight: bold; font-size: 18px;" class="team_name"></p>
+                
+            </div>
+            <button type="button" class="btn"> Details </button>
+        </div>
+        <div class="info">
+            <p><span class="mem1_name"></span></p>
+            <p><span class="mem2_name"></span></p>
+            <p><span class="mem3_name"></span></p>
+            <p style="font-size: 11px; margin-top: 10px; margin-left: auto;"><span>Registration Status: </span><span class="reg_status"></span></p>
+        </div>
+    </div>
     <div class="teamListContainer" id="listContainer">
-        <span class="no_data" style="display: none;">No team is listed yet</span>
-        <div class="teamCount">
-            <span>Total Teams: </span><span id="total_team"></span>
-        </div>
-        <div id="listItemTemplate" style="display: none;" class="listItem">
-            <div class="top info">
-                <div class="team">
-                    <p style="font-weight: bold; font-size: 18px;" class="team_name"></p>
-                    
-                </div>
-                <button type="button" class="btn"> Details </button>
-            </div>
-            <div class="info">
-                <p><span class="mem1_name"></span></p>
-                <p><span class="mem2_name"></span></p>
-                <p><span class="mem3_name"></span></p>
-                <p style="font-size: 11px; margin-top: 10px; margin-left: auto;"><span>Registration Status: </span><span class="reg_status"></span></p>
-            </div>
-        </div>
     </div> 
     <div class="footer">
         <span>Developed By: </span> <a href="https://github.com/j-hossain">Jahin Hossain</a>
