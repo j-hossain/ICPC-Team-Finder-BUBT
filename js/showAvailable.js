@@ -10,6 +10,7 @@ function search(){
         createTable(filterdData);
         return;
     }
+    value = value.toString().toLowerCase();
     filterdData = [];
     AllData.forEach(data=>{
         if(data["Full Name"].toString().toLowerCase().match(value))

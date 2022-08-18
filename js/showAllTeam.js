@@ -10,6 +10,7 @@ function search(){
         createTable(filterdData);
         return;
     }
+    value = value.toString().toLowerCase();
     filterdData = [];
     AllData.forEach(data=>{
         if(data["team_name"].toString().toLowerCase().match(value))
@@ -21,7 +22,7 @@ function search(){
         else if(data["mem3_name"].toString().toLowerCase().match(value))
             filterdData.push(data);
         else if(data["mem1_intake"].toString().toLowerCase().match(value))
-            filterdData.push(data);
+            filterdData.push(data); 
         else if(data["mem2_intake"].toString().toLowerCase().match(value))
             filterdData.push(data);
         else if(data["mem3_intake"].toString().toLowerCase().match(value))
