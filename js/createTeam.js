@@ -12,6 +12,8 @@ function getAllTeam(){
 }
 
 function createTeam(){
+    alert("Registration is closed !! be more careful next year");
+    return;
     // first check if all fields are filled
     document.querySelector(".loaderImage").style.display="block";
     let allinput = document.querySelectorAll(".form-control");
