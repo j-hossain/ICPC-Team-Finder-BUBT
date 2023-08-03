@@ -1,2 +1,2 @@
-let teamInfoUrl = "https://script.google.com/macros/s/AKfycbyoqvUuZ_OfE7wLHVK7MAh9Paj_cOgYAeR1ZsYBaV_MezRNi8bXQSO2gHKamrXS3RWBNQ/exec";
+let teamInfoUrl = "https://script.google.com/macros/s/AKfycbyGOgEAWdXenIN5CuAi1ZUoo4q8aO9YygEl8Y-oeK2zlYd5OY7rS1RMpN3lyprnHIykoA/exec";
 let teamFinderUrl = "https://script.google.com/macros/s/AKfycbz2t2xNfiC31JBrGLDT_tvEqdQalARglV_uPFVWNUx5NGps7ucsVEuvtBDAvDbdRa52Kw/exec";

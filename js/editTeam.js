@@ -2,16 +2,51 @@ getAllTeam();
 let AllData = [];
 
 function getAllTeam() {
+    // document.querySelector(".loaderImage").style.display = "block";
     const xhttp = new XMLHttpRequest();
     xhttp.onload = async function () {
         let res = JSON.parse(xhttp.responseText);
         AllData = res[0].data;
+        setTeamOptions();
+        // document.querySelector(".loaderImage").style.display = "none";
     }
     xhttp.open("GET", teamInfoUrl);
     xhttp.send();
 }
 
-function createTeam() {
+function getTeamInfo() {
+    let teamName = document.getElementById("team_name").value;
+    let f = false;
+    AllData.forEach(team => {
+        if (team["team_name"] == teamName) {
+            f = true;
+            let allinput = document.querySelectorAll(".form-control");
+            allinput.forEach(i => {
+                if (i.id != "phone") i.value = team[i.id];
+            });
+            return;
+        }
+    })
+    if (!f) {
+        let allinput = document.querySelectorAll(".form-control");
+        allinput.forEach(i => {
+            if (i.id != "team_name") i.value = "";
+        });
+    }
+}
+
+
+function setTeamOptions() {
+    let dataList = document.getElementById('team_options');
+    AllData.forEach(team => {
+        let option = document.createElement('option');
+        option.value = team["team_name"];
+        option.innerHTML = team["team_name"];
+        dataList.appendChild(option);
+    });
+}
+
+function editTeam() {
     // alert("Registration is closed !! be more careful next year");
     // return;
     // first check if all fields are filled
@@ -35,24 +70,16 @@ function createTeam() {
 
 function checkTeam(info) {
     let flag = 1;
-    if (!info["team_name"].toString().toLowerCase().startsWith("bubt_")) {
-        alert("MUST use BUBT_ before team name...");
-        flag = 0;
-        document.querySelector(".loaderImage").style.display = "none";
-        return;
-    }
+    let teamNameBool = false;
     AllData.forEach(team => {
         if (flag == 1) {
-            if (info["team_name"].toString().includes(team["team_name"])) {
-                alert("This team name is already used, try a unique name !!");
-                flag = 0;
-                document.querySelector(".loaderImage").style.display = "none";
-                return;
+            if (info["team_name"].toString() == team["team_name"]) {
+                teamNameBool = true;
             }
             for (let i = 1; i <= 3; i++) {
                 for (let j = 1; j <= 3; j++) {
                     if (info["mem" + i + "_id"] == team["mem" + j + "_id"] && team["team_name"] != info["team_name"]) {
-                        alert("Member " + i + " is present in another team " + team["team_name"]);
+                        alert("Member " + i + " is present in " + team["team_name"]);
                         flag = 0;
                         document.querySelector(".loaderImage").style.display = "none";
                         return;
@@ -61,8 +88,14 @@ function checkTeam(info) {
             }
         }
     });
+    if (!teamNameBool) {
+        alert("You cannot change the team name");
+        flag = 0;
+        document.querySelector(".loaderImage").style.display = "none";
+        return;
+    }
     if (flag) {
-        if (confirm("You cannont change team name next time and remember the phone number you entered for changes in future. Are you sure about this team ?")) {
+        if (confirm("If the phone number and the team name previously entered do not match, there won't be any update. Are you sure about this team ?")) {
             sendTeam(info);
         }
         else {
@@ -81,8 +114,10 @@ function sendTeam(info) {
         },
         redirect: 'follow',
         body: JSON.stringify(info) // body data type must match "Content-Type" header
-    }).then(() => {
-        deletPersonInfo(info);
+    }).then(data => {
+        // let res = JSON.parse(data.text);
+        console.log(data);
+        // deletPersonInfo(info);
     }).catch((e) => {
         console.log(e);
     });

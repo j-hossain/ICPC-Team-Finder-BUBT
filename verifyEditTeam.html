@@ -18,8 +18,8 @@
     integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
     crossorigin="anonymous"></script>
   <script src="./js/common.js"></script>
-  <script src="./js/createTeam.js"></script>
-  <title>Confirm a team</title>
+  <script src="./js/editTeam.js"></script>
+  <title>Edit team</title>
 </head>
 
 <body>
@@ -34,9 +34,6 @@
         <ul class="navbar-nav m-auto">
           <li class="nav-item">
             <a class="nav-link" href="./">Home </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="./verifyEditTeam.html">Edit Team</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="./showAllTeam.html">All Teams</a>
@@ -62,13 +59,15 @@
       <div class="mb-3">
         <label for="team_name" class="form-label">Team Name</label>
         <input placeholder="BUBT_Name" required type="text" class="form-control" id="team_name"
-          aria-describedby="emailHelp">
-        <div id="teamNameHelp" class="form-text">Must use BUBT before your team name, Example: BUBT_Anonymous</div>
+          aria-describedby="emailHelp" list="team_options" oninput="getTeamInfo()">
+        <datalist id="team_options">
+
+        </datalist>
         <label style="margin-top: 10px;" for="phone" class="form-label">Phone Number</label>
         <input placeholder="+8801....." required type="number" class="form-control" id="phone"
           aria-describedby="emailHelp">
-        <div id="phoneHelp" class="form-text">Enter an active phone number so that we can contact you regarding
-          resitration</div>
+        <div id="phoneHelp" class="form-text">Enter The phone number you used during registration Phone number cannot be
+          changed</div>
       </div>
       <div class="memberSection">
         <span class="memberHead">Member 1</span>
@@ -138,11 +137,10 @@
           <label for="mem3_email" class="form-label">ICPC global Email</label>
           <input placeholder="Member 3 Email" required type="email" class="form-control" id="mem3_email">
         </div>
-      </div>
-      <div style="display: flex; justify-content:flex-end" class="bt">
-        <button style="background-color: lightseagreen; color:#fff;" type="button" class="btn"
-          onclick="createTeam()">Confirm Team</button>
-      </div>
+        <div style="display: flex; justify-content:flex-end" class="bt">
+          <button style="background-color: lightseagreen; color:#fff;" type="button" class="btn"
+            onclick="editTeam()">Confirm Team</button>
+        </div>
     </form>
   </div>
   <div class="footer">
