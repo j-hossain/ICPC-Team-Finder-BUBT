@@ -13,8 +13,58 @@
     }
 
     & .teamGroup {
-        background: lightgreen;
+        background: lightcyan;
         border-bottom: 10px solid white;
         border-top: 10px solid white;
+
+        & button {
+            padding: 5px;
+            font-size: 12px;
+            border-radius: 5px;
+        }
     }
+
+    & .teamGroup.pending {
+        background: lightgoldenrodyellow;
+
+        & button {
+            background: rgb(199, 199, 61);
+        }
+    }
+
+    & .teamGroup.notyet {
+        background: rgb(255, 215, 215);
+
+        & button {
+            background: rgb(207, 80, 80);
+        }
+    }
+}
+
+#filterBox {
+    background-color: lightcyan;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.filter-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+label {
+    font-weight: bold;
+}
+
+select,
+input {
+    border: 1px solid #ccc;
+    padding: 5px;
+    border-radius: 5px;
 }

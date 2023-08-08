@@ -20,10 +20,11 @@
     <link rel="stylesheet" href="./css/coachViewStyle.css">
     <script src="./js/common.js"></script>
     <script src="./js/coachView.js"></script>
-    <title>All teams</title>
+    <title>Coach View</title>
 </head>
 
 <body>
+    <div id="snackbar"></div>
     <nav class="navbar navbar-expand-lg navbar-light">
         <!-- <a class="navbar-brand" href="#">Navbar</a> -->
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
@@ -42,6 +43,9 @@
                     <a class="nav-link" href="./verifyEditTeam.html">Edit Team</a>
                 </li>
                 <li class="nav-item">
+                    <a class="nav-link" href="./showAllTeam.html">All Team</a>
+                </li>
+                <li class="nav-item">
                     <a class="nav-link" href="./showAvailable.html">Available members</a>
                 </li>
                 <li class="nav-item">
@@ -55,9 +59,36 @@
             </ul>
         </div>
     </nav>
-    <div class="searchBox">
-        <input type="text" id="search" placeholder="Search by Team name, intake or member name">
-        <button class="btn" type="button" onclick="search()">Search</button>
+    <div id="filterBox">
+        <input type="text" id="teamNameFilter" placeholder="Search Team Name">
+        <div class="filter-group">
+            <label for="sectionFilter">Section:</label>
+            <select id="sectionFilter">
+                <option value="">All</option>
+                <!-- Populate with section options -->
+            </select>
+        </div>
+        <div class="filter-group">
+            <label for="intakeFilter">Intake:</label>
+            <select id="intakeFilter">
+                <option value="">All</option>
+                <!-- Populate with intake options -->
+            </select>
+        </div>
+        <div class="filter-group">
+            <label for="registrationStatusFilter">Status:</label>
+            <select id="registrationStatusFilter">
+                <option value="">All</option>
+            </select>
+        </div>
+        <div class="filter-group">
+            <label for="coachNameFilter">Coach:</label>
+            <select id="coachNameFilter">
+                <option value="">All</option>
+                <!-- Populate with coach name options -->
+            </select>
+        </div>
+        <button class="btn" onclick="resetFilter()"> Reset</button>
     </div>
     <img class="loaderImage" src="./res/loader.gif" alt="Loading.....">
     <div class="teamCount">

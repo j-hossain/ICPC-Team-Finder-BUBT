@@ -1,68 +1,68 @@
-*{
+* {
     margin: 0;
     padding: 0;
     font-family: Arial, Helvetica, sans-serif;
     scroll-behavior: smooth;
 }
 
-a{
+a {
     text-decoration: none;
 }
 
-body{
+body {
     position: relative;
     min-height: 80vh;
 }
 
-.options{
+.options {
     display: flex;
     flex-direction: column;
     width: 250px;
     column-gap: 20px;
     row-gap: 20px;
-    margin:60px auto;
+    margin: 60px auto;
 }
 
-a.a-btn{
+a.a-btn {
     text-align: center;
     padding: 15px;
-    background-color:lightseagreen;
+    background-color: lightseagreen;
     color: azure;
     border-radius: 15px;
     outline: none;
 }
 
-.btn{
+.btn {
     cursor: pointer;
     border: none;
     text-align: center;
     padding: 10px;
-    background-color:lightseagreen;
+    background-color: lightseagreen;
     color: azure;
     border-radius: 10px;
     outline: none;
 
 }
 
-.loaderImage{
+.loaderImage {
     position: fixed;
     top: 50%;
     left: 50%;
     z-index: 999;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     width: 100px;
     height: 100px;
     object-fit: contain;
     border-radius: 50%;
 }
 
-#listContainer{
+#listContainer {
     width: 95%;
     max-width: 400px;
     margin: 20px auto;
 }
 
-#listContainer .listItem{
+#listContainer .listItem {
     width: 100%;
     display: flex;
     align-items: center;
@@ -74,23 +74,23 @@ a.a-btn{
     border-radius: 10px;
 }
 
-#listContainer .listItem.pending{
+#listContainer .listItem.pending {
     background-color: lightgoldenrodyellow;
 }
 
-#listContainer .listItem.pending .btn{
+#listContainer .listItem.pending .btn {
     background-color: rgb(199, 199, 61);
 }
 
-#listContainer .listItem.notyet{
+#listContainer .listItem.notyet {
     background-color: rgb(255, 215, 215);
 }
 
-#listContainer .listItem.notyet .btn{
+#listContainer .listItem.notyet .btn {
     background-color: rgb(207, 80, 80);
 }
 
-#listContainer .listItem .info{
+#listContainer .listItem .info {
     width: 90%;
     display: flex;
     flex-wrap: wrap;
@@ -99,22 +99,22 @@ a.a-btn{
 }
 
 
-#listContainer .listItem .info .name{
+#listContainer .listItem .info .name {
     font-weight: bold;
 }
 
-.no_data{
+.no_data {
     font-size: large;
     text-align: center;
 }
 
-.formContainer{
+.formContainer {
     height: auto;
     width: fit-content;
     margin: 0 auto;
 }
 
-#personInfo{
+#personInfo {
     position: fixed;
     top: 0px;
     left: 20px;
@@ -126,7 +126,7 @@ a.a-btn{
     background-color: #fff;
 }
 
-#personInfo .infoSection{
+#personInfo .infoSection {
     background-color: lightcyan;
     padding: 10px;
     margin: 10px 0;
@@ -137,18 +137,19 @@ a.a-btn{
 }
 
 
-#personInfo .infoSection .infoItem{
+#personInfo .infoSection .infoItem {
     display: flex;
     justify-content: flex-start;
     column-gap: 10px;
 }
 
-#memberForm{
+#memberForm {
     /* width: fit-content; */
     max-width: 700px;
     margin: 30px auto;
 }
-#memberForm .memberSection{
+
+#memberForm .memberSection {
     text-align: center;
     border-radius: 10px;
     background-color: lightcyan;
@@ -158,7 +159,7 @@ a.a-btn{
 }
 
 
-#memberForm .memberSection .memberHead{
+#memberForm .memberSection .memberHead {
     background-color: lightseagreen;
     display: inline-block;
     font-size: 24px;
@@ -170,12 +171,12 @@ a.a-btn{
     margin-bottom: 15px;
 }
 
-.teamListContainer .listItem{
+.teamListContainer .listItem {
     display: flex;
     flex-direction: column;
 }
 
-.teamListContainer .listItem .info.top{
+.teamListContainer .listItem .info.top {
     display: flex;
     flex-direction: row !important;
     justify-content: space-between !important;
@@ -184,12 +185,12 @@ a.a-btn{
     padding-bottom: 10px;
 }
 
-.contentBody{
+.contentBody {
     margin: 0 auto;
     max-width: 500px;
 }
 
-.contentBody h3{
+.contentBody h3 {
     text-align: center;
     margin-top: 30px;
     letter-spacing: 10px;
@@ -197,11 +198,11 @@ a.a-btn{
     /* text-transform: uppercase; */
 }
 
-#listParent{
+#listParent {
     padding: 30px;
 }
 
-#listParent li{
+#listParent li {
     margin: 10px 0;
     background-color: lightseagreen;
     color: #fff;
@@ -212,7 +213,7 @@ a.a-btn{
     text-align: justify;
 }
 
-.searchBox{
+.searchBox {
     width: 95%;
     max-width: 400px;
     margin: 20px auto;
@@ -220,22 +221,22 @@ a.a-btn{
     column-gap: 10px;
 }
 
-#search{
+#search {
     width: 100%;
     outline: none;
     border: 1px solid #eee;
     padding: 10px;
 }
 
-.teamCount{
+.teamCount {
     text-align: center;
 }
 
-.navbar{
+.navbar {
     background-color: lightseagreen;
 }
 
-.nav-item{
+.nav-item {
     padding: 0 20px;
     border-right: 1px solid #ccc;
     border-left: 1px solid #ccc;
@@ -243,24 +244,47 @@ a.a-btn{
     border-radius: 10px;
     margin: 0 5px; */
 }
-.nav-item a{
+
+.nav-item a {
     color: #fff !important;
 }
 
-.footer{
+.footer {
     padding: 15px 30px;
     background-color: lightseagreen;
     color: #fff;
     text-align: right;
 }
 
-.footer a{
-    color:rgb(255, 255, 0);
+.footer a {
+    color: rgb(255, 255, 0);
+}
+
+#snackbar {
+    visibility: hidden;
+    min-width: 250px;
+    margin-left: -125px;
+    background-color: #333333b7;
+    color: #fff;
+    text-align: center;
+    border-radius: 10px;
+    padding: 16px;
+    position: fixed;
+    z-index: 1;
+    right: 2%;
+    bottom: 5%;
+    font-size: 17px;
+}
+
+#snackbar.show {
+    visibility: visible;
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
 }
 
 @media only screen and (max-width: 600px) {
-    #personInfo{
+    #personInfo {
         left: 50%;
         transform: translateX(-50%);
     }
-  }
+}
