@@ -1,4 +1,4 @@
-let teamInfoUrl = "https://script.google.com/macros/s/AKfycbyGOgEAWdXenIN5CuAi1ZUoo4q8aO9YygEl8Y-oeK2zlYd5OY7rS1RMpN3lyprnHIykoA/exec";
+let teamInfoUrl = "https://script.google.com/macros/s/AKfycbyZwIfPUDVec6RetEgHESWCeQayT9E1hspvPvIOYfHCrdgE8du2pjp9DINFj9pH3cGkDQ/exec";
 // let teamInfoUrl = "https://script.google.com/macros/s/AKfycbwhI6b9tLhs0cscHQBrT6ASHdcjjMRajOuyFUns7FXnlsZQU2AAMSzaJBYDljONmN4Z/exec";
 let teamFinderUrl = "https://script.google.com/macros/s/AKfycbz2t2xNfiC31JBrGLDT_tvEqdQalARglV_uPFVWNUx5NGps7ucsVEuvtBDAvDbdRa52Kw/exec";
 
