@@ -7,12 +7,14 @@ function updateTable() {
     const teamNameFilter = document.getElementById("teamNameFilter").value.toLowerCase();
     const sectionFilter = document.getElementById("sectionFilter").value;
     const intakeFilter = document.getElementById("intakeFilter").value;
+    const idFilter = document.getElementById("idFilter").value;
     const registrationStatusFilter = document.getElementById("registrationStatusFilter").value;
     const coachNameFilter = document.getElementById("coachNameFilter").value;
 
     filterdData = AllData.filter(team => {
         return (
             team["team_name"].toLowerCase().includes(teamNameFilter) &&
+            (team["mem1_id"].toString().includes(idFilter) || team["mem2_id"].toString().includes(idFilter) || team["mem2_id"].toString().includes(idFilter)) &&
             (registrationStatusFilter === "ALL" || team["reg_status"] === registrationStatusFilter) &&
             (coachNameFilter === "ALL" || team["Coach"] === coachNameFilter)
         );
@@ -77,6 +79,7 @@ function populateOptions(data) {
     populateThis(stats, "registrationStatusFilter");
     populateThis(coaches, "coachNameFilter");
     document.getElementById("teamNameFilter").addEventListener("input", updateTable);
+    document.getElementById("idFilter").addEventListener("input", updateTable);
 }
 
 function populateThis(options, divId) {
