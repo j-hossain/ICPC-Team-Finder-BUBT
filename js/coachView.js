@@ -23,6 +23,7 @@ function updateTable() {
         return checkIntakeSection(intakeFilter, sectionFilter, team);
     });
     createTable(filterdData);
+    populateOptions(filterdData);
 }
 
 function checkIntakeSection(intakeFilter, sectionFilter, team) {
@@ -52,7 +53,6 @@ function getAllTeam() {
         filterdData = AllData;
         createTable(filterdData);
         populateOptions(AllData);
-
     }
     xhttp.open("GET", teamInfoUrl + "?coachView=true");
     xhttp.send();
@@ -74,10 +74,10 @@ function populateOptions(data) {
         coaches.add(team["Coach"]);
     });
 
-    populateThis(intakes, "intakeFilter");
-    populateThis(sections, "sectionFilter");
+    populateThis(Array.from(intakes).sort((a, b) => a - b), "intakeFilter");
+    populateThis(Array.from(sections).sort((a, b) => a - b), "sectionFilter");
     populateThis(stats, "registrationStatusFilter");
-    populateThis(coaches, "coachNameFilter");
+    populateThis(Array.from(coaches).sort(), "coachNameFilter");
     document.getElementById("teamNameFilter").addEventListener("input", updateTable);
     document.getElementById("idFilter").addEventListener("input", updateTable);
 }
@@ -89,13 +89,10 @@ function populateThis(options, divId) {
     options.forEach(option => {
         let opt = document.createElement('option');
         opt.value = option;
-        opt.innerHTML = option == "" ? "Null" : option;
+        opt.innerHTML = option || "Null";
         div.appendChild(opt);
     });
 }
-
-
-
 
 function createTable(data) {
     let parent = document.getElementById("listContainerTable");
