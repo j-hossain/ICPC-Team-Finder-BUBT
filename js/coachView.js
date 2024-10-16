@@ -23,7 +23,6 @@ function updateTable() {
         return checkIntakeSection(intakeFilter, sectionFilter, team);
     });
     createTable(filterdData);
-    populateOptions(filterdData);
 }
 
 function checkIntakeSection(intakeFilter, sectionFilter, team) {
