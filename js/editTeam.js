@@ -116,7 +116,7 @@ function sendTeam(info) {
         body: JSON.stringify(info) // body data type must match "Content-Type" header
     }).then(data => {
         // let res = JSON.parse(data.text);
-        console.log(data);
+        document.querySelector(".loaderImage").style.display = "none";
         // deletPersonInfo(info);
     }).catch((e) => {
         console.log(e);
