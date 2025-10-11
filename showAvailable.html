@@ -1,134 +1,390 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Available Members - BUBT ICPC</title>
+        <!-- Tailwind CSS -->
+        <script src="https://cdn.tailwindcss.com"></script>
+        <!-- Archivo Font -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&display=swap"
+            rel="stylesheet" />
+        <style>
+            body {
+                font-family: 'Archivo', sans-serif;
+            }
+            .loaderImage {
+                display: none;
+                width: 80px;
+                height: 80px;
+            }
+        </style>
+        <script src="./js/common.js"></script>
+    </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
-        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
-        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
-        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-        crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="./css/main.css">
-    <script src="./js/common.js"></script>
-    <title>Show all available students</title>
-</head>
+    <body class="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+        <!-- Navigation -->
+        <nav class="bg-white shadow-md">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex justify-between h-16">
+                    <div class="flex">
+                        <div class="flex-shrink-0 flex items-center">
+                            <span class="text-xl font-bold text-indigo-600"
+                                >BUBT ICPC</span
+                            >
+                        </div>
+                    </div>
+                    <div class="hidden md:flex md:items-center">
+                        <div class="ml-10 flex items-baseline space-x-4">
+                            <a
+                                href="./"
+                                class="text-gray-700 hover:text-indigo-600 px-3 py-2 rounded-md text-sm font-medium"
+                                >Home</a
+                            >
+                            <a
+                                href="./createTeam.html"
+                                class="text-gray-700 hover:text-indigo-600 px-3 py-2 rounded-md text-sm font-medium"
+                                >Confirm Team</a
+                            >
+                            <a
+                                href="./verifyEditTeam.html"
+                                class="text-gray-700 hover:text-indigo-600 px-3 py-2 rounded-md text-sm font-medium"
+                                >Edit Team</a
+                            >
+                            <a
+                                href="./showAllTeam.html"
+                                class="text-gray-700 hover:text-indigo-600 px-3 py-2 rounded-md text-sm font-medium"
+                                >All Teams</a
+                            >
+                            <a
+                                href="https://docs.google.com/forms/d/e/1FAIpQLSda_j28F0ABCQq71I8aSa1MTHfCIVFMAe4m2AiR_1r7KYdIWA/viewform?usp=sf_link"
+                                target="_blank"
+                                class="text-gray-700 hover:text-indigo-600 px-3 py-2 rounded-md text-sm font-medium"
+                                >List yourself</a
+                            >
+                            <a
+                                href="./guideline.html"
+                                class="text-gray-700 hover:text-indigo-600 px-3 py-2 rounded-md text-sm font-medium"
+                                >Guideline</a
+                            >
+                        </div>
+                    </div>
+                    <div class="md:hidden flex items-center">
+                        <button
+                            type="button"
+                            class="inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:text-indigo-600 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500"
+                            aria-controls="mobile-menu"
+                            aria-expanded="false"
+                            id="mobile-menu-button">
+                            <svg
+                                class="block h-6 w-6"
+                                xmlns="http://www.w3.org/2000/svg"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                stroke="currentColor"
+                                aria-hidden="true">
+                                <path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                    d="M4 6h16M4 12h16M4 18h16" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
 
-<body>
-    <nav class="navbar navbar-expand-lg navbar-light">
-        <!-- <a class="navbar-brand" href="#">Navbar</a> -->
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav m-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="./">Home </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="./createTeam.html">Confirm Team</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="./verifyEditTeam.html">Edit Team</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="./showAllTeam.html">All Teams</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" target="_blank"
-                        href="https://docs.google.com/forms/d/e/1FAIpQLSda_j28F0ABCQq71I8aSa1MTHfCIVFMAe4m2AiR_1r7KYdIWA/viewform?usp=sf_link">List
-                        yourself</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="./guideline.html">Guidleline</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
-    <div class="searchBox">
-        <input type="text" id="search" placeholder="Search by name, intake or shift">
-        <button class="btn" type="button" onclick="search()">Search</button>
-    </div>
-    <img class="loaderImage" src="./res/loader.gif" alt="Loading.....">
-    <div id="personInfo" style="display: none;">
-        <div style="padding: 10px 0; display: flex; justify-content: flex-end;" class="hder">
-            <button class="btn" type="button" onclick="closeInfo()">Close</button>
-        </div>
-        <div class="infoSection">
-            <div class="infoItem">
-                <span>Name:</span>
-                <span class="name"></span>
+            <!-- Mobile menu -->
+            <div class="md:hidden hidden" id="mobile-menu">
+                <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t">
+                    <a
+                        href="./"
+                        class="text-gray-700 hover:text-indigo-600 block px-3 py-2 rounded-md text-base font-medium"
+                        >Home</a
+                    >
+                    <a
+                        href="./createTeam.html"
+                        class="text-gray-700 hover:text-indigo-600 block px-3 py-2 rounded-md text-base font-medium"
+                        >Confirm Team</a
+                    >
+                    <a
+                        href="./verifyEditTeam.html"
+                        class="text-gray-700 hover:text-indigo-600 block px-3 py-2 rounded-md text-base font-medium"
+                        >Edit Team</a
+                    >
+                    <a
+                        href="./showAllTeam.html"
+                        class="text-gray-700 hover:text-indigo-600 block px-3 py-2 rounded-md text-base font-medium"
+                        >All Teams</a
+                    >
+                    <a
+                        href="https://docs.google.com/forms/d/e/1FAIpQLSda_j28F0ABCQq71I8aSa1MTHfCIVFMAe4m2AiR_1r7KYdIWA/viewform?usp=sf_link"
+                        target="_blank"
+                        class="text-gray-700 hover:text-indigo-600 block px-3 py-2 rounded-md text-base font-medium"
+                        >List yourself</a
+                    >
+                    <a
+                        href="./guideline.html"
+                        class="text-gray-700 hover:text-indigo-600 block px-3 py-2 rounded-md text-base font-medium"
+                        >Guideline</a
+                    >
+                </div>
             </div>
-            <div class="infoItem">
-                <span class="shift"></span>
-                <span class="intake"></span>
-                <span>Intake</span>
-                <span>[ Sec</span>
-                <span class="section"></span>
-                <span>]</span>
-            </div>
-        </div>
-        <div class="infoSection">
-            <div class="infoItem">
-                <span>Stopstalk:</span>
-                <a href="" class="stopstalk">link</a>
-            </div>
-            <div class="infoItem">
-                <span>Total Solve:</span>
-                <span class="solve"></span>
-            </div>
-            <div class="infoItem">
-                <span>Codeforces rating Max:</span>
-                <span class="cfmax"></span>
-            </div>
-        </div>
-        <div class="infoSection">
-            <div class="infoItem">
-                <span>Facebook:</span>
-                <a href="" class="facebook">link</a>
-            </div>
-            <div class="infoItem">
-                <span>Discord:</span>
-                <span class="discord"></span>
-            </div>
-            <div class="infoItem">
-                <span>Phone:</span>
-                <span class="phone"></span>
-            </div>
-            <div class="infoItem">
-                <span>Email:</span>
-                <a href="mailto:jahin.hsn101@gmail.com" class="email"></a>
-            </div>
-        </div>
-        <div class="infoSection">
-            <div class="infoItem">
-                <span>Comments:</span>
-                <span class="comment"></span>
-            </div>
-        </div>
-    </div>
-    <div id="listContainer">
-    </div>
-    <span class="no_data" style="display: none;">No one is available here currently</span>
-    <div id="listItemTemplate" style="display: none;" class="listItem">
-        <div class="info">
-            <p><span class="name"></span></p>
-            <p>Intake: <span class="intake"></span></p>
-        </div>
-        <button type="button" class="btn">Details</button>
-    </div>
-    <div class="footer">
-        <span>Developed By: </span> <a href="https://github.com/j-hossain">Jahin Hossain</a>
-    </div>
-    <script src="./js/showAvailable.js"></script>
-</body>
+        </nav>
 
+        <!-- Loader (hidden by default) -->
+        <img
+            class="loaderImage fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-50"
+            src="./res/loader.gif"
+            alt="Loading....." />
+
+        <!-- Main Content -->
+        <div class="container mx-auto px-4 py-8 max-w-6xl">
+            <!-- Header and Search -->
+            <div class="bg-white rounded-xl shadow-lg p-6 mb-8">
+                <h1 class="text-3xl font-bold text-gray-800 mb-2">
+                    Available Members
+                </h1>
+                <p class="text-gray-600 mb-6">
+                    Find team members for the ICPC competition
+                </p>
+
+                <div class="flex flex-col md:flex-row gap-4 mb-6">
+                    <div class="flex-grow">
+                        <input
+                            type="text"
+                            id="search"
+                            placeholder="Search by name, intake or shift"
+                            class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition" />
+                    </div>
+                    <button
+                        class="px-6 py-2 bg-indigo-600 hover:bg-indigo-700 text-white font-medium rounded-lg shadow transition duration-300 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-opacity-50"
+                        type="button"
+                        onclick="search()">
+                        Search
+                    </button>
+                </div>
+            </div>
+
+            <!-- No Data Message -->
+            <div class="no_data text-center py-12 hidden">
+                <div class="bg-white rounded-xl shadow-lg p-8 max-w-md mx-auto">
+                    <svg
+                        class="w-16 h-16 text-gray-400 mx-auto mb-4"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                    </svg>
+                    <h3 class="text-xl font-semibold text-gray-700 mb-2">
+                        No members found
+                    </h3>
+                    <p class="text-gray-500">
+                        No one is available here currently or matches your
+                        search criteria.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Members List Container -->
+            <div
+                id="listContainer"
+                class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Members will be dynamically inserted here -->
+            </div>
+        </div>
+
+        <!-- Member Detail Modal -->
+        <div
+            id="personInfo"
+            class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50 hidden">
+            <div
+                class="bg-white rounded-xl shadow-lg max-w-2xl w-full max-h-[90vh] overflow-y-auto">
+                <div class="flex justify-between items-center p-6 border-b">
+                    <h3 class="text-xl font-bold text-gray-800">
+                        Member Details
+                    </h3>
+                    <button
+                        type="button"
+                        onclick="closeInfo()"
+                        class="text-gray-400 hover:text-gray-600 transition">
+                        <svg
+                            class="w-6 h-6"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                                d="M6 18L18 6M6 6l12 12"></path>
+                        </svg>
+                    </button>
+                </div>
+
+                <div class="p-6">
+                    <!-- Basic Info Section -->
+                    <div class="mb-6 p-4 bg-blue-50 rounded-lg">
+                        <div class="space-y-3">
+                            <div class="flex justify-between">
+                                <span class="font-medium text-gray-700"
+                                    >Name:</span
+                                >
+                                <span
+                                    class="name text-gray-900 font-semibold"></span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="font-medium text-gray-700"
+                                    >Academic Info:</span
+                                >
+                                <span
+                                    class="academic-info text-gray-900"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Programming Stats Section -->
+                    <div class="mb-6 p-4 bg-indigo-50 rounded-lg">
+                        <h4 class="font-semibold text-indigo-700 mb-3">
+                            Programming Stats
+                        </h4>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div class="flex justify-between">
+                                <span class="font-medium text-gray-700"
+                                    >Stopstalk:</span
+                                >
+                                <a
+                                    href=""
+                                    class="stopstalk text-indigo-600 hover:text-indigo-800 transition"
+                                    target="_blank"
+                                    >View Profile</a
+                                >
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="font-medium text-gray-700"
+                                    >Total Solve:</span
+                                >
+                                <span
+                                    class="solve text-gray-900 font-medium"></span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="font-medium text-gray-700"
+                                    >Codeforces Max:</span
+                                >
+                                <span
+                                    class="cfmax text-gray-900 font-medium"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Contact Info Section -->
+                    <div class="mb-6 p-4 bg-purple-50 rounded-lg">
+                        <h4 class="font-semibold text-purple-700 mb-3">
+                            Contact Information
+                        </h4>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div class="flex justify-between">
+                                <span class="font-medium text-gray-700"
+                                    >Facebook:</span
+                                >
+                                <a
+                                    href=""
+                                    class="facebook text-purple-600 hover:text-purple-800 transition"
+                                    target="_blank"
+                                    >View Profile</a
+                                >
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="font-medium text-gray-700"
+                                    >Discord:</span
+                                >
+                                <span class="discord text-gray-900"></span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="font-medium text-gray-700"
+                                    >Phone:</span
+                                >
+                                <span class="phone text-gray-900"></span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="font-medium text-gray-700"
+                                    >Email:</span
+                                >
+                                <a
+                                    href="mailto:"
+                                    class="email text-purple-600 hover:text-purple-800 transition"></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Comments Section -->
+                    <div class="p-4 bg-pink-50 rounded-lg">
+                        <h4 class="font-semibold text-pink-700 mb-3">
+                            Additional Comments
+                        </h4>
+                        <div
+                            class="comment text-gray-700 bg-white p-3 rounded border"></div>
+                    </div>
+                </div>
+
+                <div class="p-6 border-t flex justify-end">
+                    <button
+                        type="button"
+                        onclick="closeInfo()"
+                        class="px-4 py-2 bg-gray-200 hover:bg-gray-300 text-gray-800 font-medium rounded-lg transition duration-300">
+                        Close
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Member Item Template (Hidden) -->
+        <div id="listItemTemplate" class="hidden">
+            <div
+                class="listItem bg-white rounded-xl shadow-md p-6 transition-all duration-300 hover:shadow-lg h-full flex flex-col">
+                <div class="flex-grow">
+                    <div class="mb-4">
+                        <h3
+                            class="name text-xl font-bold text-indigo-700 mb-2"></h3>
+                        <div class="text-gray-600">
+                            <p>
+                                Intake: <span class="intake font-medium"></span>
+                            </p>
+                            <p class="shift-section text-sm mt-1"></p>
+                        </div>
+                    </div>
+                </div>
+                <button
+                    type="button"
+                    class="btn mt-4 px-4 py-2 bg-indigo-600 hover:bg-indigo-700 text-white font-medium rounded-lg shadow transition duration-300 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-opacity-50 w-full">
+                    View Details
+                </button>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="bg-white border-t mt-12 py-6">
+            <div class="container mx-auto px-4 text-center">
+                <p class="text-gray-700">
+                    <span class="font-medium">Developed By:</span>
+                    <a
+                        href="https://github.com/j-hossain"
+                        class="text-indigo-600 hover:text-indigo-800 font-medium transition-colors"
+                        >Jahin Hossain</a
+                    >
+                </p>
+            </div>
+        </div>
+        <script src="./js/showAvailable.js"></script>
+    </body>
 </html>

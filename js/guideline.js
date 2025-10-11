@@ -1,5 +1,5 @@
 let data = {
-    points:[
+    points: [
         "Use BUBT_ before your team name. Since you are representing your University here",
         "This is not the registration site !! Take your team info to your coach and let the coach create the team for you",
         "Participant cannot be a coach !! Coach must be a faculty of the university",
@@ -12,12 +12,16 @@ let data = {
 
 createPoints();
 
-function createPoints(){
+function createPoints() {
     console.log(data);
     let parent = document.getElementById("listParent");
-    data["points"].forEach(point=>{
+    data["points"].forEach(point => {
         let li = document.createElement("li");
         li.innerHTML = point
         parent.appendChild(li);
     });
 }
+document.getElementById('mobile-menu-button').addEventListener('click', function () {
+    const mobileMenu = document.getElementById('mobile-menu');
+    mobileMenu.classList.toggle('hidden');
+});
