@@ -5,24 +5,110 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/main.css">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Archivo Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Archivo', sans-serif;
+        }
+    </style>
     <title>BUBT Team Finder</title>
 </head>
 
-<body>
-    <div class="footer">
-        <span>Developed By: </span> <a href="https://github.com/j-hossain">Jahin Hossain</a>
-    </div>
-    <div class="options">
-        <a class="a-btn" href="./createTeam.html">Confirm a team</a>
-        <a class="a-btn" href="./verifyEditTeam.html">Edit team</a>
-        <a class="a-btn"
-            href="https://docs.google.com/forms/d/e/1FAIpQLSda_j28F0ABCQq71I8aSa1MTHfCIVFMAe4m2AiR_1r7KYdIWA/viewform?usp=sf_link"
-            target="_blank">Not in a team? List your info</a>
-        <a href="./showAllTeam.html" class="a-btn">Show all Team</a>
-        <a href="./showAvailable.html" class="a-btn">Show available members</a>
-        <a href="./guideline.html" class="a-btn">General Guideline</a>
-    </div>
+<body class="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 flex flex-col items-center justify-center p-4">
+    <main class="w-full max-w-4xl">
+        <!-- Options Section -->
+        <div class="bg-white rounded-2xl shadow-xl p-6 mb-8">
+            <h1 class="text-3xl font-bold text-center text-gray-800 my-4">BUBT Team Finder</h1>
+            <!-- <p class="text-center text-gray-600 mb-8">Manage your team members and Contests efficiently</p> -->
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                <a href="./createTeam.html" class="group">
+                    <div class="bg-indigo-50 hover:bg-indigo-100 border border-indigo-200 rounded-xl p-5 transition-all duration-300 group-hover:shadow-md group-hover:-translate-y-1 h-full flex flex-col">
+                        <div class="mb-3">
+                            <svg class="w-8 h-8 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path>
+                            </svg>
+                        </div>
+                        <h3 class="font-semibold text-gray-800 mb-2">Confirm a team</h3>
+                        <p class="text-gray-600 text-sm">Create and confirm your team for the Contest</p>
+                    </div>
+                </a>
+                
+                <a href="./verifyEditTeam.html" class="group">
+                    <div class="bg-purple-50 hover:bg-purple-100 border border-purple-200 rounded-xl p-5 transition-all duration-300 group-hover:shadow-md group-hover:-translate-y-1 h-full flex flex-col">
+                        <div class="mb-3">
+                            <svg class="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="font-semibold text-gray-800 mb-2">Edit team</h3>
+                        <p class="text-gray-600 text-sm">Update or modify your team information</p>
+                    </div>
+                </a>
+                
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSda_j28F0ABCQq71I8aSa1MTHfCIVFMAe4m2AiR_1r7KYdIWA/viewform?usp=sf_link" target="_blank" class="group">
+                    <div class="bg-amber-50 hover:bg-amber-100 border border-amber-200 rounded-xl p-5 transition-all duration-300 group-hover:shadow-md group-hover:-translate-y-1 h-full flex flex-col">
+                        <div class="mb-3">
+                            <svg class="w-8 h-8 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18 9v3m0 0v3m0-3h3m-3 0h-3m-2-5a4 4 0 11-8 0 4 4 0 018 0zM3 20a6 6 0 0112 0v1H3v-1z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="font-semibold text-gray-800 mb-2">Not in a team?</h3>
+                        <p class="text-gray-600 text-sm">List your information to find team members</p>
+                    </div>
+                </a>
+                
+                <a href="./showAllTeam.html" class="group">
+                    <div class="bg-emerald-50 hover:bg-emerald-100 border border-emerald-200 rounded-xl p-5 transition-all duration-300 group-hover:shadow-md group-hover:-translate-y-1 h-full flex flex-col">
+                        <div class="mb-3">
+                            <svg class="w-8 h-8 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="font-semibold text-gray-800 mb-2">Show all Team</h3>
+                        <p class="text-gray-600 text-sm">View all registered teams in the system</p>
+                    </div>
+                </a>
+                
+                <a href="./showAvailable.html" class="group">
+                    <div class="bg-cyan-50 hover:bg-cyan-100 border border-cyan-200 rounded-xl p-5 transition-all duration-300 group-hover:shadow-md group-hover:-translate-y-1 h-full flex flex-col">
+                        <div class="mb-3">
+                            <svg class="w-8 h-8 text-cyan-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="font-semibold text-gray-800 mb-2">Show available members</h3>
+                        <p class="text-gray-600 text-sm">Find members who are looking for teams</p>
+                    </div>
+                </a>
+                
+                <a href="./guideline.html" class="group">
+                    <div class="bg-blue-50 hover:bg-blue-100 border border-blue-200 rounded-xl p-5 transition-all duration-300 group-hover:shadow-md group-hover:-translate-y-1 h-full flex flex-col">
+                        <div class="mb-3">
+                            <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="font-semibold text-gray-800 mb-2">General Guideline</h3>
+                        <p class="text-gray-600 text-sm">Read the guidelines for team management</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+        
+        <!-- Footer Section -->
+        <div class="bg-white rounded-2xl shadow-md p-4 text-center">
+            <p class="text-gray-700">
+                <span class="font-medium">Developed By:</span> 
+                <a href="https://github.com/j-hossain" class="text-indigo-600 hover:text-indigo-800 font-medium transition-colors duration-300">Jahin Hossain</a>
+            </p>
+        </div>
+    </main>
 </body>
 
 </html>
